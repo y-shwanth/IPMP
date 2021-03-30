@@ -1,0 +1,2 @@
+Same logic as in the BinaryS2 question where we just find the index at which array is rotated.
+Here, arr[index] gives the minimum element in the sorted and rotated array.
