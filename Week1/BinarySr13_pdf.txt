@@ -1,0 +1,16 @@
+I do'nt think we could create an infinite size array
+Let's assume it exists.......and array index starts with 1.
+Then,
+
+f = r = 1;
+while(1)
+{
+   f = r;
+   r = 2 * r;
+   if(arr[r]==1)
+   {
+      int index = binarySearch(arr,f,r);
+      cout<<index;
+      break;
+   }
+}
