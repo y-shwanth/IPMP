@@ -16,29 +16,7 @@ public:
 };
 */
 
-//INORDER TRAVERSAL
-class Solution {
-public:
-    Node* temp = NULL;
-    void func(Node* node)
-    {
-        if(node == NULL)
-            return;
-        func(node->left);
-        temp->next = node;
-        temp = node;
-        func(node->right);
-    }
-    Node* connect(Node* root) {
-        if(root == NULL)
-            return root;
-        func(root);
-        return root;
-    }
-};
-
-
-//LEVEL ORDER TRAVERSAL
+//QUES 9 - CONNECT LEVEL ORDER
 class Solution {
 public:
     Node* connect(Node* root) {
@@ -66,3 +44,26 @@ public:
         return root;
     }
 };
+//QUES 7 - POPULATE INORDER
+class Solution {
+public:
+    Node* temp = NULL;
+    void func(Node* node)
+    {
+        if(node == NULL)
+            return;
+        func(node->left);
+        temp->next = node;
+        temp = node;
+        func(node->right);
+    }
+    Node* connect(Node* root) {
+        if(root == NULL)
+            return root;
+        func(root);
+        return root;
+    }
+};
+
+
+
