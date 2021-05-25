@@ -16,34 +16,6 @@ public:
 };
 */
 
-//QUES 9 - CONNECT LEVEL ORDER
-class Solution {
-public:
-    Node* connect(Node* root) {
-        if(root == NULL)
-            return root;
-        Node* temp;
-        queue<Node*> q;
-        q.push(root);
-        while(q.empty() == false)
-        {
-            temp = q.front();
-            q.pop();
-            temp->next = q.front();
-            if(temp->left != NULL)
-                q.push(temp->left);
-            if(temp->right != NULL)
-                q.push(temp->right);
-        }
-        temp = root;
-        while(temp != NULL)
-        {
-            temp->next = NULL;
-            temp = temp->right;
-        }
-        return root;
-    }
-};
 //QUES 7 - POPULATE INORDER
 class Solution {
 public:
