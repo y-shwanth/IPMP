@@ -20,7 +20,7 @@ int ic_strcmp(string s1, string s2)
   
 int main() 
 { 
-    cout<<"ret: "<<ic_strcmp("Geeks", "apple") <<endl; 
-    cout<<"ret: "<<ic_strcmp("", "ABCD")<<endl; 
+    cout<<"ret: "<<ic_strcmp("hllo", "hilo") <<endl; 
+    cout<<"ret: "<<ic_strcmp("abcd", "ABCD")<<endl; 
     return 0; 
 } 
