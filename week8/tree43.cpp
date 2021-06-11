@@ -11,12 +11,12 @@
  */
 class Solution {
 public:
-    TreeNode* trimBST(TreeNode* root, int low, int high) {
+    TreeNode* func(TreeNode* root, int low, int high) {
         if(root == NULL)
             return NULL;
         
-        root->left = trimBST(root->left, low, high);
-        root->right = trimBST(root->right, low, high);
+        root->left = func(root->left, low, high);
+        root->right = func(root->right, low, high);
         
         if(root->val < low)
         {
@@ -29,5 +29,9 @@ public:
         }
         
         return root;
+    }
+    
+    TreeNode* trimBST(TreeNode* root, int low, int high) {
+        return func(root,low,high);
     }
 };
